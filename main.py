@@ -26,5 +26,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
 
 @app.get("/products")
 def get_all_products():
-  cursor = "product-1"
-  return cursor
+  cursor = midb.cursor()
+  cursor.execute("SELECT * FROM bicycles")
+  records = cursor.fetchall()
+  return {"Porducts: ": records}
