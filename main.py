@@ -18,5 +18,5 @@ def read_item(item_id: int, q: Union[str, None] = None):
 
 @app.get("/products")
 def get_all_products():
-    cursor = "hola"
+    cursor = "product-1"
     return cursor
