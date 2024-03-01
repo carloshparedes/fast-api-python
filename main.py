@@ -1,5 +1,14 @@
 from typing import Union
 from fastapi import FastAPI
+import mysql.connector 
+from models import bicycles
+
+midb = mysql.connector.connect(
+  host = "localhost",
+  user = "root",
+  password = "",
+  database = "test"
+)
 
 app = FastAPI()
 
